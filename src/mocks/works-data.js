@@ -74,6 +74,142 @@ export const headerData = {
   ]
 }
 
+export const filterWorksData = [
+  {
+    id: 1,
+    name: 'all work',
+    value: 'all-work'
+  },
+  {
+    id: 2,
+    name: 'digital teams',
+    value: 'digital-teams'
+  },
+  {
+    id: 3,
+    name: 'strategy',
+    value: 'strategy'
+  },
+  {
+    id: 4,
+    name: 'technology',
+    value: 'technology'
+  },
+  {
+    id: 5,
+    name: 'design',
+    value: 'design'
+  },
+  {
+    id: 6,
+    name: 'advertising',
+    value: 'advertising'
+  },
+  {
+    id: 7,
+    name: 'digital marketing',
+    value: 'digital-marketing'
+  },
+  {
+    id: 8,
+    name: 'data intelligence',
+    value: 'data-intelligence'
+  },
+  {
+    id: 9,
+    name: 'branding',
+    value: 'branding'
+  },
+  {
+    id: 10,
+    name: 'content',
+    value: 'content'
+  },
+  {
+    id: 11,
+    name: 'commerce',
+    value: 'commerce'
+  },
+  {
+    id: 12,
+    name: 'media',
+    value: 'media'
+  },
+  {
+    id: 13,
+    name: 'marketing',
+    value: 'marketing'
+  }
+]
+
+export const filterIndustriesData = [
+  {
+    id: 1,
+    name: 'all industries',
+    value: 'all-industries'
+  },
+  {
+    id: 2,
+    name: 'recruitment',
+    value: 'recruitment'
+  },
+  {
+    id: 3,
+    name: 'finance & insurance',
+    value: 'finance-insurance'
+  },
+  {
+    id: 4,
+    name: 'utilities',
+    value: 'utilities'
+  },
+  {
+    id: 5,
+    name: 'b2b',
+    value: 'b2b'
+  },
+  {
+    id: 6,
+    name: 'travel',
+    value: 'travel'
+  },
+  {
+    id: 7,
+    name: 'retail & fashion',
+    value: 'retail-fashion'
+  },
+  {
+    id: 8,
+    name: 'data intelligence',
+    value: 'data-intelligence'
+  },
+  {
+    id: 9,
+    name: 'health',
+    value: 'health'
+  },
+  {
+    id: 10,
+    name: 'education',
+    value: 'education'
+  },
+  {
+    id: 11,
+    name: 'media',
+    value: 'media'
+  },
+  {
+    id: 12,
+    name: 'fast moving consumer goods',
+    value: 'fast-moving-consumer-goods'
+  },
+  {
+    id: 13,
+    name: 'non profit',
+    value: 'non-profit'
+  }
+]
+
 export const footerData = {
   id: 1,
   title: 'Dept',
