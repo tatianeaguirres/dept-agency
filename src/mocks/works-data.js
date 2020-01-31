@@ -1,0 +1,287 @@
+import mobileImage from '../assets/images/mobile-header-image.png'
+import desktopImage from '../assets/images/desktop-header-image.png'
+import facebook from '../assets/images/icons/facebook-icon.png'
+import twitter from '../assets/images/icons/twitter-icon.png'
+import instagram from '../assets/images/icons/instagram-icon.png'
+import bolcom from '../assets/images/clients/bolcom.png'
+import kempen from '../assets/images/clients/kempen.png'
+import philips from '../assets/images/clients/philips.png'
+import gemeentemuseum from '../assets/images/clients/gemeentemuseum.png'
+import florensis from '../assets/images/clients/florensis.png'
+import lightning from '../assets/images/clients/lightning.png'
+import tui from '../assets/images/clients/tui.png'
+import chocomel from '../assets/images/clients/chocomel.png'
+import jbl from '../assets/images/clients/jbl.png'
+import zalando from '../assets/images/clients/zalando.png'
+import koninklijke from '../assets/images/clients/koninklijke-bibliotheek.png'
+import liberty from '../assets/images/clients/liberty-global.png'
+import arla from '../assets/images/clients/arla.png'
+
+export const headerData = {
+  id: 1,
+  title: 'Work',
+  logo: 'Dept',
+  button: 'View case',
+  desktop: desktopImage,
+  mobile: mobileImage,
+  alt: 'Man on his back with a backpack in front of a white board',
+  menuItems: [
+    {
+      id: 1,
+      name: 'HOME',
+      url: '/'
+    },
+    {
+      id: 2,
+      name: 'WERK',
+      url: '/'
+    },
+    {
+      id: 3,
+      name: 'OVER',
+      url: '/'
+    },
+    {
+      id: 4,
+      name: 'DIENSTEN',
+      url: '/'
+    },
+    {
+      id: 5,
+      name: 'PARTNERS',
+      url: '/'
+    },
+    {
+      id: 6,
+      name: 'STORIES',
+      url: '/'
+    },
+    {
+      id: 7,
+      name: 'VACATURES',
+      url: '/'
+    },
+    {
+      id: 8,
+      name: 'EVENTS',
+      url: '/'
+    },
+    {
+      id: 9,
+      name: 'CONTACTS',
+      url: '/'
+    }
+  ]
+}
+
+export const footerData = {
+  id: 1,
+  title: 'Dept',
+  chamberOfCommerce: '63464101',
+  vat: 'NL 8552.47.502.B01',
+  socialMedias: [
+    {
+      id: 1,
+      name: 'facebook',
+      icon: facebook,
+      alt: 'facebook icon',
+      url: 'https://www.facebook.com/'
+    },
+    {
+      id: 2,
+      name: 'twitter',
+      icon: twitter,
+      alt: 'twitter icon',
+      url: 'https://www.twitter.com/'
+    },
+    {
+      id: 3,
+      name: 'instagram',
+      icon: instagram,
+      alt: 'instagram icon',
+      url: 'https://www.instagram.com/'
+    }
+  ],
+  menu: [
+    {
+      id: 1,
+      name: 'Work',
+      url: '/'
+    },
+    {
+      id: 2,
+      name: 'Services',
+      url: '/'
+    },
+    {
+      id: 3,
+      name: 'Stories',
+      url: '/'
+    },
+    {
+      id: 4,
+      name: 'About',
+      url: '/'
+    },
+    {
+      id: 5,
+      name: 'Careers',
+      url: '/'
+    },
+    {
+      id: 6,
+      name: 'Contact',
+      url: '/'
+    }
+  ]
+}
+
+export const testemonialData = {
+  id: 1,
+  author: 'MATTIJS TEN BRINK – CEO, TRANSAVIA',
+  content:
+    'Dept helped us tell our story through a bold new identity and a robust online experience. To the tune of 60% growth in online bookings in just one month.'
+}
+
+export const worksData = [
+  {
+    id: 1,
+    image: bolcom,
+    name: 'Bol.com',
+    title: 'A summer island in the Netherlands',
+    category: 'commerce',
+    industry: 'fast moving consumer goods'
+  },
+  {
+    id: 2,
+    image: kempen,
+    name: 'Kempen',
+    title: 'Not some average banking website',
+    category: 'digital marketing',
+    industry: 'finance & insurance'
+  },
+  {
+    id: 3,
+    image: philips,
+    name: 'Philips',
+    title: 'Beautiful design meets innovative technology',
+    category: 'branding',
+    industry: 'utilities'
+  },
+  {
+    id: 4,
+    image: gemeentemuseum,
+    name: 'Gemeentemuseum',
+    title: 'A 100 years of Mondriaan & De Stijl',
+    category: 'strategy',
+    industry: 'non-profit'
+  },
+  {
+    id: 5,
+    image: 'without',
+    name: 'Microsoft',
+    title:
+      'Tapping into Ireland’s unique gaming culture and bringing a fresh flavour to their Xbox social media channels',
+    category: 'technology',
+    industry: 'b2b'
+  },
+  {
+    id: 6,
+    image: 'without',
+    name: "O'Neill",
+    title:
+      "Integrating existing content into O'Neill's new e-commerce platform",
+    category: 'design',
+    industry: 'travel'
+  },
+  {
+    id: 7,
+    image: florensis,
+    name: 'Florensis',
+    title: 'Rethinking the entire online ecosystem',
+    category: 'digital teams',
+    industry: 'recruitment'
+  },
+  {
+    id: 8,
+    image: lightning,
+    name: 'Be Lighting',
+    title: 'Delivering clarity on a global scale',
+    category: 'advertising',
+    industry: 'health'
+  },
+  {
+    id: 9,
+    image: tui,
+    name: 'Tui',
+    title: 'Swipe to find your next holiday destination',
+    category: 'digital marketing',
+    industry: 'education'
+  },
+  {
+    id: 10,
+    image: 'without',
+    name: 'Butlins',
+    title:
+      'Enhacing customer experience for personalised holiday planning using real time data',
+    category: 'branding',
+    industry: 'health'
+  },
+  {
+    id: 11,
+    image: 'without',
+    name: 'Vacanseselect',
+    title:
+      'Predicting booking behavior for holidays with smart data, voice search and machine learning',
+    category: 'content',
+    industry: 'media'
+  },
+  {
+    id: 12,
+    image: chocomel,
+    name: 'Chocomel',
+    title: 'A compaign for the limited edition letter packs',
+    category: 'commerce',
+    industry: 'health'
+  },
+  {
+    id: 13,
+    image: jbl,
+    name: 'JBL',
+    title: 'Live like a champion with Jerome Booteng',
+    category: 'marketing',
+    industry: 'media'
+  },
+  {
+    id: 14,
+    image: zalando,
+    name: 'Zalando',
+    title: 'Innovative SEO and content strategy for Zalando',
+    category: 'commerce',
+    industry: 'recruitment'
+  },
+  {
+    id: 15,
+    image: koninklijke,
+    name: 'Koninklijke Bibliotheek',
+    title: 'The search for the most influential book ever',
+    category: 'advertising',
+    industry: 'utilities'
+  },
+  {
+    id: 16,
+    image: liberty,
+    name: 'Liberty Gobal',
+    title: 'Delivering complex commerce solutions',
+    category: 'design',
+    industry: 'non-profit'
+  },
+  {
+    id: 17,
+    image: arla,
+    name: 'Arla',
+    title: 'Swipe to find your next holiday destination',
+    category: 'digital teams',
+    industry: 'recruitment'
+  }
+]
