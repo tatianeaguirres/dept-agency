@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import './header.css'
 import Menu from '../menu/menu'
-import MobileHeaderImage from '../../assets/images/mobile-header-image.png'
 
-const Header = () => {
+const Header = ({ headerData }) => {
   const [openMenu, setOpenMenu] = useState(false)
 
   return (
     <header className='header'>
       <div className='header__container'>
         <a className='header__logo' href='/' title='Dept Agency'>
-          Dept
+          {headerData.logo}
         </a>
         <div className='header__menu' onClick={() => setOpenMenu(true)}>
           <p className='header__menu-text'>Menu</p>
@@ -23,16 +22,18 @@ const Header = () => {
       <section className='header__highlight'>
         <img
           className='header__mobile-image'
-          src={MobileHeaderImage}
-          alt='Man on his back with a backpack in front of a white board'
+          src={headerData.mobile}
+          alt={headerData.alt}
         />
-        <h2 className='header__title'>Work</h2>
+        <h1 className='header__title'>{headerData.title}</h1>
         <div className='header__button-container'>
-          <button className='header__button'>View case</button>
+          <button className='header__button'>{headerData.button}</button>
         </div>
       </section>
 
-      {openMenu && <Menu onClose={() => setOpenMenu(false)} />}
+      {openMenu && (
+        <Menu headerData={headerData} onClose={() => setOpenMenu(false)} />
+      )}
     </header>
   )
 }
