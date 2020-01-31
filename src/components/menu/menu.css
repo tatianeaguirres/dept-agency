@@ -1,0 +1,89 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  transition: all 0.7s ease;
+}
+
+.menu__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 3.26rem;
+  padding: 0.6rem 1.25rem 0.6rem 1.25rem;
+}
+
+.menu__logo {
+  font-family: 'OpenSans-ExtraBold', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 1.4rem;
+  letter-spacing: 0.01rem;
+}
+
+.menu__menu-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.menu__close-button {
+  color: var(--white-color);
+  font-size: 2rem;
+}
+
+.menu__content {
+  display: flex;
+  width: 100%;
+  padding: 5rem 1.25rem 0 1.25rem;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu__items {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  border-bottom: 0.3px solid var(--dark-border-color);
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
+
+.menu__items:last-child {
+  border: none;
+}
+
+.menu__selected-icon {
+  width: 0.87rem;
+  height: 1.12rem;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.menu__selected-icon--active {
+  width: 0.87rem;
+  height: 1.12rem;
+  margin: 0 0.5rem 0.5rem 0;
+  background-image: url(../../assets/images/triangle.png);
+}
+
+.menu__items a {
+  display: flex;
+  text-decoration: none;
+  color: var(--white-color);
+  font-family: 'Teko-Regular', sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 2.9rem;
+}
