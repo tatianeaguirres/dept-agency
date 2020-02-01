@@ -51,6 +51,25 @@ const headerDataMock = {
       name: 'CONTACTS',
       url: '/'
     }
+  ],
+  landenItems: [
+    {
+      id: 1,
+      name: 'global',
+      url: '/'
+    },
+    {
+      id: 2,
+      name: 'nederland',
+      url: '/'
+    }
+  ],
+  socialItems: [
+    {
+      id: 1,
+      name: 'facebook',
+      url: 'https://www.facebook.com/'
+    }
   ]
 }
 
@@ -68,5 +87,8 @@ describe('<Menu/>', () => {
     expect(getByText('VACATURES')).toBeInTheDocument()
     expect(getByText('EVENTS')).toBeInTheDocument()
     expect(getByText('CONTACTS')).toBeInTheDocument()
+    expect(getByText('global')).toBeInTheDocument()
+    expect(getByText('nederland')).toBeInTheDocument()
+    expect(getByText('facebook')).toBeInTheDocument()
   })
 })

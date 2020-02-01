@@ -44,8 +44,14 @@
 /* 
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
+  ##and
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+  ##and
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
 */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   .works {
     padding: 1rem 7.5% 3rem 7.5%;
   }

@@ -71,6 +71,65 @@ export const headerData = {
       name: 'CONTACTS',
       url: '/'
     }
+  ],
+  landenItems: [
+    {
+      id: 1,
+      name: 'global',
+      url: '/'
+    },
+    {
+      id: 2,
+      name: 'nederland',
+      url: '/'
+    },
+    {
+      id: 3,
+      name: 'united states',
+      url: '/'
+    },
+    {
+      id: 4,
+      name: 'ireland',
+      url: '/'
+    },
+    {
+      id: 5,
+      name: 'united kingdom',
+      url: '/'
+    },
+    {
+      id: 6,
+      name: 'deutschland',
+      url: '/'
+    },
+    {
+      id: 7,
+      name: 'schweiz',
+      url: '/'
+    }
+  ],
+  socialItems: [
+    {
+      id: 1,
+      name: 'facebook',
+      url: 'https://www.facebook.com/'
+    },
+    {
+      id: 2,
+      name: 'twitter',
+      url: 'https://twitter.com/'
+    },
+    {
+      id: 3,
+      name: 'instagram',
+      url: 'https://www.instagram.com/'
+    },
+    {
+      id: 4,
+      name: 'linkedin',
+      url: 'https://www.linkedin.com/'
+    }
   ]
 }
 

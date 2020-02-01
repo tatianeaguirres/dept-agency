@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import Header from '../header'
 
-export const headerDataMock = {
+const headerDataMock = {
   id: 1,
   title: 'Work',
   logo: 'Dept',
