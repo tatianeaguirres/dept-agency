@@ -1,4 +1,5 @@
 .cards__card-with-image,
+.cards__card-with-image--highlighted,
 .cards__card-with-text,
 .cards__card-with-testemonials {
   display: flex;
@@ -17,18 +18,18 @@
   border-top: 0.09rem solid var(--light-border-color);
 }
 
-.cards > .cards__card-with-text {
+.works__cards-column > .cards__card-with-text {
   border-bottom: 0.09rem solid var(--light-border-color);
   border-top: 0.09rem solid var(--light-border-color);
 }
 
-.cards + .cards__card-with-text {
-  border-bottom: none;
+.works__cards-column > .cards__card-with-text ~ .cards__card-with-text {
+  border-top: none;
 }
 
 .cards__card-image {
   width: 100%;
-  max-height: 300px;
+  height: 18rem;
   object-fit: cover;
   margin-bottom: 1.5rem;
 }
@@ -47,6 +48,10 @@
   font-size: 2.2rem;
   line-height: 2.3rem;
   letter-spacing: 0.07rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .cards__card-with-text > .cards__card-title {
@@ -73,4 +78,118 @@
   text-transform: uppercase;
   color: var(--dark-color);
   font-size: 1rem;
+}
+
+.cards_button {
+  display: none;
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .cards__card-image {
+    height: 22rem;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cards__card-with-image {
+    width: 49%;
+  }
+
+  .cards__card-with-testemonials {
+    width: 100%;
+    padding: 3rem 7.5rem 3rem 7.5rem;
+  }
+
+  .cards__card-with-image--highlighted {
+    width: 60%;
+  }
+
+  .works__desktop-only > .cards__card-with-image--highlighted {
+    width: 100%;
+  }
+
+  .cards__card-with-image--highlighted > .cards__card-image {
+    height: 21rem;
+  }
+
+  .cards__card-with-text {
+    padding: 1rem 0 1rem 0;
+    height: 10.5rem;
+  }
+
+  .cards__card-image {
+    height: 18rem;
+    margin-bottom: 1rem;
+  }
+
+  .cards__card-name {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cards__card-title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .cards__card-content {
+    -webkit-line-clamp: 3;
+  }
+
+  .cards__card-with-image > .cards__card-title,
+  .cards__card-with-image--highlighted > .cards__card-title {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .cards__card-with-testemonials > .cards__card-content:hover,
+  .cards__card-with-image > .cards__card-title:hover,
+  .cards__card-with-image--highlighted > .cards__card-title:hover {
+    overflow: visible;
+    white-space: normal;
+    display: block;
+  }
+
+  .cards__card-with-text > .cards__card-title {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+
+  .cards_button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: var(--blue-color);
+    border: 1px solid transparent;
+    font-family: 'OpenSans-SemiBold', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 0;
+    margin-top: 0.8rem;
+    cursor: pointer;
+    width: 5.2rem;
+  }
+
+  .cards_button:hover {
+    border-bottom: 1px solid var(--blue-color);
+  }
+
+  .cards_button-icon {
+    filter: invert(14%) sepia(95%) saturate(4414%) hue-rotate(244deg)
+      brightness(86%) contrast(130%);
+    height: 0.9rem;
+    margin-right: 0.5rem;
+  }
 }

@@ -7,7 +7,14 @@ const Clients = ({ clientsDescription, clientsData }) => {
       <h2 className='clients__title'>{clientsDescription.title}</h2>
       <p className='clients__content'>{clientsDescription.description}</p>
       <div className='clients__images'>
-        {clientsData.map(client => (
+        {clientsData.slice(0, 6).map(client => (
+          <div key={client.id} className='clients__logo'>
+            <img src={client.image} alt={client.alt} />
+          </div>
+        ))}
+      </div>
+      <div className='clients__images--desktop-only'>
+        {clientsData.slice(0, 16).map(client => (
           <div key={client.id} className='clients__logo'>
             <img src={client.image} alt={client.alt} />
           </div>

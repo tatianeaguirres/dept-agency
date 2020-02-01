@@ -5,14 +5,14 @@ const Footer = ({ footerData }) => {
   return (
     <footer className='footer'>
       <div className='footer__menu'>
-        <ul className='footer__menu-list'>
+        <ul className='footer__list'>
           {footerData.menu.map(item => (
             <li key={item.id} className='footer__menu-item'>
               <a href={item.url}>{item.name}</a>
             </li>
           ))}
         </ul>
-        <ul className='footer__social-list'>
+        <ul className='footer__list'>
           {footerData.socialMedias.map(item => (
             <li key={item.id} className='footer__social-item'>
               <a href={item.url}>

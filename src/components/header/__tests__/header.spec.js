@@ -14,7 +14,7 @@ export const headerDataMock = {
 
 describe('<Header/>', () => {
   it('renders content', () => {
-    const { getByText, getByAltText } = render(
+    const { getByText, getAllByAltText } = render(
       <Header headerData={headerDataMock} />
     )
 
@@ -23,7 +23,9 @@ describe('<Header/>', () => {
     expect(getByText('Work')).toBeInTheDocument()
     expect(getByText('View case')).toBeInTheDocument()
     expect(
-      getByAltText('Man on his back with a backpack in front of a white board')
+      getAllByAltText(
+        'Man on his back with a backpack in front of a white board'
+      )[0]
     ).toBeInTheDocument()
   })
 })

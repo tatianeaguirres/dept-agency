@@ -11,14 +11,13 @@
   border-bottom: 1px solid var(--dark-color);
 }
 
-.footer__menu-list,
-.footer__social-list {
+.footer__list {
   display: flex;
   flex-direction: column;
   width: 50%;
 }
 
-.footer__social-list {
+.footer__menu > .footer__list ~ .footer__list {
   align-items: flex-end;
 }
 
@@ -43,10 +42,13 @@
 
 .footer__social-item img {
   height: 1.7rem;
+  cursor: pointer;
+  transform: none;
+  transition: transform 0.2s ease-in-out;
 }
 
 .footer__social-item img:hover {
-  height: 1.8rem;
+  transform: rotate(20deg);
 }
 
 .footer__info-section {
@@ -64,4 +66,55 @@
 
 .footer__company-info {
   padding-top: 2rem;
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer {
+    padding: 4rem 7.5% 3rem 7.5%;
+  }
+
+  .footer__menu {
+    justify-content: flex-end;
+    padding-bottom: 0;
+  }
+
+  .footer__list {
+    flex-direction: row;
+    width: 75%;
+  }
+
+  .footer__menu-item {
+    display: flex;
+    padding: 0 0.8rem 0 0;
+  }
+
+  .footer__social-item {
+    padding: 0 0 1.6rem 1rem;
+  }
+
+  .footer__menu-item a {
+    font-size: 1.7rem;
+  }
+
+  .footer__social-item img {
+    height: 1.5rem;
+  }
+
+  .footer__menu > .footer__list ~ .footer__list {
+    width: 25%;
+    justify-content: flex-end;
+  }
+
+  .footer__info-section,
+  .footer__company-info {
+    display: flex;
+  }
+
+  .footer__company-info p {
+    margin-right: 1.5rem;
+  }
 }

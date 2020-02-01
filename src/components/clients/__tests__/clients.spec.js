@@ -23,7 +23,7 @@ const clientsDataMock = [
 
 describe('<Clients/>', () => {
   it('renders content', () => {
-    const { getByText, getByAltText } = render(
+    const { getByText, getAllByAltText } = render(
       <Clients
         clientsDescription={clientsDescriptionMock}
         clientsData={clientsDataMock}
@@ -32,7 +32,7 @@ describe('<Clients/>', () => {
 
     expect(getByText('Clients')).toBeInTheDocument()
     expect(getByText('Some description.')).toBeInTheDocument()
-    expect(getByAltText('company logo companyX')).toBeInTheDocument()
-    expect(getByAltText('company logo companyY')).toBeInTheDocument()
+    expect(getAllByAltText('company logo companyX')[0]).toBeInTheDocument()
+    expect(getAllByAltText('company logo companyY')[0]).toBeInTheDocument()
   })
 })

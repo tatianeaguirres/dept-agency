@@ -4,12 +4,21 @@
   width: 100vw;
 }
 
-.header__container {
+.header__container,
+.header__container--scrolled {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  background-color: var(--white-color);
   width: 100%;
   padding: 0.6rem 1.25rem 0.6rem 1.25rem;
+  z-index: 1;
+}
+
+.header__container--scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--white-color);
 }
 
 .header__logo {
@@ -58,11 +67,15 @@
   height: 100%;
 }
 
+.header__desktop-image {
+  display: none;
+}
+
 .header__title {
   font-family: 'Teko-Light', sans-serif;
   text-transform: uppercase;
   color: var(--black-color);
-  font-size: 11.6rem;
+  font-size: 10rem;
   position: absolute;
   top: 3.6rem;
   left: 1.7rem;
@@ -77,13 +90,99 @@
 }
 
 .header__button {
-  width: 90%;
+  width: 100%;
   background-color: var(--black-color);
   color: var(--white-color);
   font-family: 'OpenSans-SemiBold', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
   padding: 0.8rem 0 0.8rem 0;
+  margin: 0 1rem 0 1rem;
   letter-spacing: 0.03rem;
   border: none;
+  cursor: pointer;
+  box-shadow: none;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.header__button:hover {
+  box-shadow: 0 0 0.3rem 0.1rem var(--dark-color);
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .header__title {
+    font-size: 13.7rem;
+    top: 4rem;
+    left: 1.8rem;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    align-items: center;
+  }
+
+  .header__container,
+  .header__container--scrolled {
+    padding: 0.6rem 0 0.6rem 0;
+  }
+
+  .header__container {
+    width: 85%;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+  }
+
+  .header__container--scrolled {
+    width: 100%;
+    padding: 0.6rem 7.5% 0.6rem 7.5%;
+  }
+
+  .header__menu-text {
+    font-family: 'OpenSans-Regular', sans-serif;
+  }
+
+  .header__mobile-image {
+    display: none;
+  }
+
+  .header__desktop-image {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header__title {
+    font-size: 14.2rem;
+    top: 3.4rem;
+    left: 7.5%;
+    letter-spacing: 0.4rem;
+  }
+
+  .header__button-container {
+    width: 100%;
+    position: absolute;
+    bottom: 2rem;
+    right: 7.5%;
+    margin-top: 0;
+    justify-content: flex-end;
+  }
+
+  .header__button {
+    width: 18%;
+    font-family: 'OpenSans-Regular', sans-serif;
+    font-size: 0.8rem;
+    padding: 0.6rem 2rem 0.6rem 2rem;
+    letter-spacing: 0.03rem;
+    margin: 0;
+  }
 }

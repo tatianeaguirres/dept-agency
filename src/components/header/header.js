@@ -4,10 +4,23 @@ import Menu from '../menu/menu'
 
 const Header = ({ headerData }) => {
   const [openMenu, setOpenMenu] = useState(false)
+  const [menuClassName, setMenuClassName] = useState('header__container')
+  let [lastScrollPosition, setLastScrollPosition] = useState(0)
+
+  const changeMenuBackground = scrollPosition => {
+    scrollPosition < 300
+      ? setMenuClassName('header__container')
+      : setMenuClassName('header__container--scrolled')
+  }
+
+  window.addEventListener('scroll', function() {
+    setLastScrollPosition(window.scrollY)
+    changeMenuBackground(lastScrollPosition)
+  })
 
   return (
     <header className='header'>
-      <div className='header__container'>
+      <div className={menuClassName}>
         <a className='header__logo' href='/' title='Dept Agency'>
           {headerData.logo}
         </a>
@@ -23,6 +36,11 @@ const Header = ({ headerData }) => {
         <img
           className='header__mobile-image'
           src={headerData.mobile}
+          alt={headerData.alt}
+        />
+        <img
+          className='header__desktop-image'
+          src={headerData.desktop}
           alt={headerData.alt}
         />
         <h1 className='header__title'>{headerData.title}</h1>

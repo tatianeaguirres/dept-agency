@@ -1,7 +1,21 @@
 .works {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  width: 100%;
+}
+
+.works__cards-line,
+.works__cards-line--reverse {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.works__cards-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .works__error-message {
@@ -11,4 +25,56 @@
   line-height: 2.3rem;
   letter-spacing: 0.07rem;
   margin-top: 2rem;
+}
+
+.works__desktop-only {
+  display: none;
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .works {
+    padding: 1rem 1rem 3rem 1rem;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .works {
+    padding: 1rem 7.5% 3rem 7.5%;
+  }
+
+  .works__cards-line--reverse {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .works__cards-line {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .works__cards-column {
+    width: 35%;
+    margin-top: 1.5rem;
+  }
+
+  .works__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .works__desktop-only {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
 }
