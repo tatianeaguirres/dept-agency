@@ -32,7 +32,10 @@ const Menu = ({ headerData, onClose }) => {
           <span className='screen-reader-only'>
             Clique here to close the menu
           </span>
-          <span className='menu__close-button'>&times;</span>
+          <div className='menu__close-button'>
+            <div className='menu__close-icon-line1'></div>
+            <div className='menu__close-icon-line2'></div>
+          </div>
         </div>
       </div>
       <nav className='menu__content'>

@@ -39,8 +39,24 @@
 }
 
 .menu__close-button {
-  color: var(--white-color);
-  font-size: 2rem;
+  display: inline-block;
+  margin-left: 1.2rem;
+}
+
+.menu__close-icon-line1,
+.menu__close-icon-line2 {
+  width: 1.25rem;
+  height: 0.125rem;
+  background-color: var(--white-color);
+  margin: 0.25rem 0;
+}
+
+.menu__close-icon-line1 {
+  transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 1);
+}
+
+.menu__close-icon-line2 {
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, -5);
 }
 
 .menu__content {
