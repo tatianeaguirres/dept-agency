@@ -15,12 +15,23 @@ const CardImage = ({ props, highlight }) => {
     changeCardWidth(highlight)
   })
 
+  const keyboardActivated = event => {
+    if (event.keyCode === 13 || event.keyCode === 32)
+      alert('You activated me with the keyboard')
+  }
+
   return (
     <div className={highlightClassName}>
       <img className='cards__card-image' src={props.image} alt={props.title} />
       <p className='cards__card-name'>{props.name}</p>
       <h3 className='cards__card-title'>{props.title}</h3>
-      <button className='cards_button'>
+      <button
+        className='cards_button'
+        aria-label='Open the view of this case'
+        onClick={() => alert('More view cases')}
+        tabIndex={0}
+        onKeyDown={e => keyboardActivated(e)}
+      >
         <img src={Icon} alt='arrow icon' className='cards_button-icon' />
         View case
       </button>

@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+/* add border on focused elements for better visualization of keyboard navigation */
+*:focus {
+  outline: 1px solid var(--blue-color);
+}
+
 /* Remove default padding */
 ul[class],
 ol[class] {
@@ -50,6 +55,7 @@ a:not([class]) {
 img {
   max-width: 100%;
   display: block;
+  visibility: visible;
 }
 
 /* Natural flow and rhythm in articles by default */

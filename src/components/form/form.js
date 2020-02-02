@@ -24,7 +24,7 @@ const Form = () => {
   }
 
   return (
-    <section className='form'>
+    <section className='form' role='complementary'>
       <form onSubmit={submit}>
         <div className='form__column'>
           <h2 className='form__title'>
@@ -39,6 +39,7 @@ const Form = () => {
               <input
                 type='text'
                 id='name'
+                name='name'
                 value={name}
                 onChange={e => setName(e.target.value)}
               />
@@ -48,12 +49,14 @@ const Form = () => {
               <input
                 type='email'
                 id='email'
+                name='email'
                 value={email}
                 onChange={e => setEmail(e.target.value)}
+                aria-required='true'
                 required
               />
               <label htmlFor='email'>email</label>
-              <small className='form__required-message'>
+              <small className='form__required-message' role='alert'>
                 This field is required
               </small>
             </div>
@@ -61,6 +64,7 @@ const Form = () => {
           <div className='form__input-field'>
             <textarea
               id='message'
+              name='message'
               value={message}
               onChange={e => setMessage(e.target.value)}
               rows='4'

@@ -6,20 +6,34 @@ import Icon from '../../assets/images/caret-right-solid.svg'
 const Menu = ({ headerData, onClose }) => {
   useLockBodyScroll() // Call hook to lock body scroll
 
+  const closeMenuByKeyboard = event => {
+    if (event.keyCode === 13 || event.keyCode === 32) onClose()
+  }
+
   return (
-    <nav className='menu'>
+    <div className='menu' aria-label='Press escape to close this window'>
       <div className='menu__container'>
-        <a className='menu__logo' href='/' title='Dept Agency'>
+        <a
+          className='menu__logo'
+          href='/'
+          title='Dept Agency Logo'
+          tabIndex={0}
+          aria-label='Dept Agency Logo'
+        >
           {headerData.logo}
         </a>
-        <div className='menu__menu-icon'>
-          <span className='menu__close-button' onClick={onClose}>
-            &times;
-          </span>
+        <div
+          className='menu__menu-icon'
+          tabIndex={0}
+          onClick={onClose}
+          onKeyDown={e => closeMenuByKeyboard(e)}
+          aria-label='Close menu'
+        >
+          <span className='menu__close-button'>&times;</span>
         </div>
       </div>
-      <div className='menu__content'>
-        <ul className='menu__list'>
+      <nav className='menu__content'>
+        <ul className='menu__list' role='navigation'>
           {headerData.menuItems.map(item => (
             <li className='menu__items' key={item.id}>
               <a href={item.url}>
@@ -33,7 +47,7 @@ const Menu = ({ headerData, onClose }) => {
             </li>
           ))}
         </ul>
-      </div>
+      </nav>
       <div className='menu__landen'>
         <ul className='menu__landen-items'>
           <li>landen</li>
@@ -53,7 +67,7 @@ const Menu = ({ headerData, onClose }) => {
       </div>
       <div className='menu__social'>
         <ul className='menu__social-items'>
-          {headerData.landenItems.map(item => (
+          {headerData.socialItems.map(item => (
             <li key={item.id}>
               <a href={item.url}>
                 <img
@@ -67,7 +81,7 @@ const Menu = ({ headerData, onClose }) => {
           ))}
         </ul>
       </div>
-    </nav>
+    </div>
   )
 }
 

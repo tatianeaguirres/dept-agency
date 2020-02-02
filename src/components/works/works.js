@@ -6,7 +6,7 @@ import CardTestemonial from '../cards/card-testemonial'
 
 const Works = ({ testemonialData, worksData }) => {
   return (
-    <section className='works'>
+    <section className='works' role='main'>
       <div className='works__cards'>
         {worksData.slice(0, 4).map((work, index) => (
           <CardImage props={work} highlight={false} key={index} />

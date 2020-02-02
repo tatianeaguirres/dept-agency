@@ -1,5 +1,6 @@
 .clients {
   display: flex;
+  visibility: visible;
   flex-direction: column;
   align-items: center;
   padding: 1.2rem;
@@ -30,16 +31,19 @@
 
 .clients__images {
   display: flex;
+  visibility: visible;
   flex-wrap: wrap;
   margin-bottom: 1.2rem;
 }
 
 .clients__images--desktop-only {
   display: none;
+  visibility: hidden;
 }
 
 .clients__logo {
   display: flex;
+  visibility: visible;
   justify-content: center;
   width: 50%;
   height: 100%;
@@ -82,10 +86,12 @@
 
   .clients__images {
     display: none;
+    visibility: hidden;
   }
 
   .clients__images--desktop-only {
     display: flex;
+    visibility: visible;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;

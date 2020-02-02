@@ -1,5 +1,6 @@
 .menu {
   display: flex;
+  visibility: visible;
   flex-direction: column;
   background-color: var(--black-color);
   position: fixed;
@@ -13,6 +14,7 @@
 
 .menu__container {
   display: flex;
+  visibility: visible;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -32,6 +34,7 @@
 .menu__menu-icon {
   cursor: pointer;
   display: flex;
+  visibility: visible;
   align-items: center;
 }
 
@@ -42,18 +45,21 @@
 
 .menu__content {
   display: flex;
+  visibility: visible;
   width: 100%;
   padding: 5rem 1.25rem 0 1.25rem;
 }
 
 .menu__list {
   display: flex;
+  visibility: visible;
   flex-direction: column;
   width: 100%;
 }
 
 .menu__items {
   display: flex;
+  visibility: visible;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
@@ -68,6 +74,7 @@
 
 .menu__items a {
   display: flex;
+  visibility: visible;
   text-decoration: none;
   color: var(--white-color);
   font-family: 'Teko-Regular', sans-serif;
@@ -79,16 +86,19 @@
 
 .menu__landen {
   display: none;
+  visibility: hidden;
 }
 
 .menu__social {
   display: none;
+  visibility: hidden;
 }
 
 .menu__triangle-icon {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(63deg)
     brightness(104%) contrast(103%);
   display: none;
+  visibility: hidden;
   margin-right: 0.3rem;
 }
 
@@ -98,6 +108,7 @@
 
 a:hover .menu__triangle-icon {
   display: flex;
+  visibility: visible;
 }
 
 .menu__list:hover .menu__items a {
@@ -144,6 +155,7 @@ a:hover .menu__triangle-icon {
   .menu__landen,
   .menu__social {
     display: flex;
+    visibility: visible;
     background-color: var(--black-color);
     position: absolute;
   }
@@ -174,6 +186,7 @@ a:hover .menu__triangle-icon {
     font-size: 0.7rem;
     cursor: pointer;
     display: flex;
+    visibility: visible;
     align-items: center;
   }
 

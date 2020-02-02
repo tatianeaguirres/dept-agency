@@ -3,7 +3,7 @@ import './clients.css'
 
 const Clients = ({ clientsDescription, clientsData }) => {
   return (
-    <section className='clients'>
+    <section className='clients' role='complementary'>
       <h2 className='clients__title'>{clientsDescription.title}</h2>
       <p className='clients__content'>{clientsDescription.description}</p>
       <div className='clients__images'>

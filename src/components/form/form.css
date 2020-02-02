@@ -1,11 +1,13 @@
 .form > form {
   display: flex;
+  visibility: visible;
   flex-direction: column;
   padding: 2.2rem 2rem 4rem 2rem;
 }
 
 .form__title {
   display: flex;
+  visibility: visible;
   justify-content: center;
   flex-wrap: wrap;
   font-family: 'Teko-Light', sans-serif;
@@ -34,7 +36,6 @@
   border: none;
   border-bottom: 1px solid var(--input-border-color);
   border-radius: 0;
-  outline: none;
   width: 100%;
   margin: 0 0 8px 0;
   padding: 0;
@@ -94,6 +95,7 @@
 
 .form__required-message {
   display: none;
+  visibility: hidden;
 }
 
 /* 
@@ -114,17 +116,20 @@
 
   .form__column {
     display: flex;
+    visibility: visible;
     flex-direction: column;
   }
 
   .form__row {
     display: flex;
+    visibility: visible;
     flex-direction: row;
     justify-content: space-between;
   }
 
   .form__title {
     display: flex;
+    visibility: visible;
     flex-direction: column;
     text-align: start;
     padding-right: 5rem;
@@ -140,6 +145,7 @@
 
   .form__required-message {
     display: block;
+    visibility: visible;
     font-family: 'OpenSans-Regular', sans-serif;
     color: var(--red-color);
     font-size: 0.7rem;
