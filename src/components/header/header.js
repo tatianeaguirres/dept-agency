@@ -55,6 +55,9 @@ const Header = ({ headerData }) => {
           onKeyDown={e => openMenuByKeyboard(e)}
           aria-label='Open menu'
         >
+          <span className='screen-reader-only'>
+            Clique here to open the menu
+          </span>
           <p className='header__menu-text'>Menu</p>
           <div className='header__menu-icon'>
             <div className='header__menu-icon-line'></div>
@@ -75,6 +78,9 @@ const Header = ({ headerData }) => {
         />
         <h1 className='header__title'>{headerData.title}</h1>
         <div className='header__button-container'>
+          <span className='screen-reader-only'>
+            Clique here to open more view cases
+          </span>
           <button
             className='header__button'
             onClick={() => alert('More view cases')}

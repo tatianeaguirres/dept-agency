@@ -29,6 +29,9 @@ const Menu = ({ headerData, onClose }) => {
           onKeyDown={e => closeMenuByKeyboard(e)}
           aria-label='Close menu'
         >
+          <span className='screen-reader-only'>
+            Clique here to close the menu
+          </span>
           <span className='menu__close-button'>&times;</span>
         </div>
       </div>

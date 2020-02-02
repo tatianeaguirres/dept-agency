@@ -41,9 +41,12 @@ const Form = () => {
                 id='name'
                 name='name'
                 value={name}
+                aria-labelledby='nameLabel'
                 onChange={e => setName(e.target.value)}
               />
-              <label htmlFor='name'>name</label>
+              <label htmlFor='name' id='nameLabel'>
+                name
+              </label>
             </div>
             <div className='form__input-field'>
               <input
@@ -51,11 +54,14 @@ const Form = () => {
                 id='email'
                 name='email'
                 value={email}
+                aria-labelledby='emailLabel'
                 onChange={e => setEmail(e.target.value)}
                 aria-required='true'
                 required
               />
-              <label htmlFor='email'>email</label>
+              <label htmlFor='email' id='emailLabel'>
+                email
+              </label>
               <small className='form__required-message' role='alert'>
                 This field is required
               </small>
@@ -66,11 +72,14 @@ const Form = () => {
               id='message'
               name='message'
               value={message}
+              aria-labelledby='messageLabel'
               onChange={e => setMessage(e.target.value)}
               rows='4'
               maxLength='200'
             />
-            <label htmlFor='message'>message</label>
+            <label htmlFor='message' id='messageLabel'>
+              message
+            </label>
           </div>
           <div className='form__submit'>
             <input type='submit' id='submit' value='Sen' />

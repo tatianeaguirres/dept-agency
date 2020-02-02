@@ -19,6 +19,9 @@ const CardText = ({ props }) => {
         tabIndex={0}
         onKeyDown={e => keyboardActivated(e)}
       >
+        <span className='screen-reader-only'>
+          Clique here to open this view case
+        </span>
         <img src={Icon} alt='arrow icon' className='cards_button-icon' />
         View case
       </button>

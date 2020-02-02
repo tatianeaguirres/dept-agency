@@ -55,6 +55,9 @@ const Footer = ({ footerData }) => {
         </div>
       </div>
       <div className='footer__top-column'>
+        <span className='screen-reader-only'>
+          Clique here to scroll to top of page
+        </span>
         <button
           className='footer__top-button'
           tabIndex={0}

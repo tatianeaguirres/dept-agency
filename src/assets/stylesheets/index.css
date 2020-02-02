@@ -92,3 +92,13 @@
 html {
   font-size: 16px;
 }
+
+/* recommended style for visually hiding content that will be read by a screen reader */
+.screen-reader-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
