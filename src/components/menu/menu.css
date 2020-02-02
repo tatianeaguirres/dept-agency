@@ -10,6 +10,7 @@
   width: 100vw;
   transition: all 0.7s ease;
   z-index: 2;
+  animation: scale-up-tr 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .menu__container {
