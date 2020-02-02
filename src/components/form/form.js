@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import './form.css'
+import Modal from '../modal/modal'
 
 const Form = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [openSuccessModal, setOpenSuccessModal] = useState(false)
+  const [openErrorModal, setOpenErrorModal] = useState(false)
 
   const submit = event => {
     fetch(`/messages`, {
@@ -19,8 +22,8 @@ const Form = () => {
         message
       })
     })
-      .then(() => alert('Thank you for your message!'))
-      .catch(() => alert('There was an error, please try again'))
+      .then(() => setOpenSuccessModal(true))
+      .catch(() => setOpenErrorModal(true))
   }
 
   return (
@@ -86,6 +89,18 @@ const Form = () => {
           </div>
         </div>
       </form>
+      {openSuccessModal && (
+        <Modal
+          textContent='Thank you for your message!'
+          onClose={() => setOpenSuccessModal(false)}
+        />
+      )}
+      {openErrorModal && (
+        <Modal
+          textContent='There was an error, please try again'
+          onClose={() => setOpenErrorModal(false)}
+        />
+      )}
     </section>
   )
 }

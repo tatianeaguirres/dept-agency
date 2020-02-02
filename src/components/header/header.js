@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import './header.css'
 import Menu from '../menu/menu'
+import Modal from '../modal/modal'
 
 const Header = ({ headerData }) => {
   const [openMenu, setOpenMenu] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
   const [menuClassName, setMenuClassName] = useState('header__container')
   let [lastScrollPosition, setLastScrollPosition] = useState(0)
 
@@ -31,8 +33,7 @@ const Header = ({ headerData }) => {
   closeMenuByKeyboard()
 
   const keyboardActivated = event => {
-    if (event.keyCode === 13 || event.keyCode === 32)
-      alert('You activated me with the keyboard')
+    if (event.keyCode === 13 || event.keyCode === 32) setOpenModal(true)
   }
 
   return (
@@ -83,7 +84,7 @@ const Header = ({ headerData }) => {
           </span>
           <button
             className='header__button'
-            onClick={() => alert('More view cases')}
+            onClick={() => setOpenModal(true)}
             tabIndex={0}
             onKeyDown={e => keyboardActivated(e)}
             aria-label='Open view case'
@@ -95,6 +96,12 @@ const Header = ({ headerData }) => {
 
       {openMenu && (
         <Menu headerData={headerData} onClose={() => setOpenMenu(false)} />
+      )}
+      {openModal && (
+        <Modal
+          textContent='More view cases'
+          onClose={() => setOpenModal(false)}
+        />
       )}
     </header>
   )

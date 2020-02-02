@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './cards.css'
 import Icon from '../../assets/images/caret-right-solid.svg'
+import Modal from '../modal/modal'
 
 const CardText = ({ props }) => {
+  const [openModal, setOpenModal] = useState(false)
+
   const keyboardActivated = event => {
-    if (event.keyCode === 13 || event.keyCode === 32)
-      alert('You activated me with the keyboard')
+    if (event.keyCode === 13 || event.keyCode === 32) setOpenModal(true)
   }
 
   return (
@@ -15,7 +17,7 @@ const CardText = ({ props }) => {
       <button
         className='cards_button'
         aria-label='Open the view of this case'
-        onClick={() => alert('More view cases')}
+        onClick={() => setOpenModal(true)}
         tabIndex={0}
         onKeyDown={e => keyboardActivated(e)}
       >
@@ -25,6 +27,12 @@ const CardText = ({ props }) => {
         <img src={Icon} alt='arrow icon' className='cards_button-icon' />
         View case
       </button>
+      {openModal && (
+        <Modal
+          textContent='More view cases'
+          onClose={() => setOpenModal(false)}
+        />
+      )}
     </div>
   )
 }
