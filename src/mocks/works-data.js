@@ -345,7 +345,8 @@ export const worksData = [
     name: 'Bol.com',
     title: 'A summer island in the Netherlands',
     category: 'commerce',
-    industry: 'fast moving consumer goods'
+    industry: 'fast moving consumer goods',
+    alt: 'a group of eight people playing in a pond wearing swimwear'
   },
   {
     id: 2,
@@ -353,7 +354,9 @@ export const worksData = [
     name: 'Kempen',
     title: 'Not some average banking website',
     category: 'digital marketing',
-    industry: 'finance & insurance'
+    industry: 'finance & insurance',
+    alt:
+      'a person with a computer on his lap pointing at a paper in front of the two people'
   },
   {
     id: 3,
@@ -361,7 +364,8 @@ export const worksData = [
     name: 'Philips',
     title: 'Beautiful design meets innovative technology',
     category: 'branding',
-    industry: 'utilities'
+    industry: 'utilities',
+    alt: 'a group of lamps and lamps of various shapes'
   },
   {
     id: 4,
@@ -369,7 +373,8 @@ export const worksData = [
     name: 'Gemeentemuseum',
     title: 'A 100 years of Mondriaan & De Stijl',
     category: 'strategy',
-    industry: 'non-profit'
+    industry: 'non-profit',
+    alt: 'a woman with her back in front of an abstract and colorful painting'
   },
   {
     id: 5,
@@ -395,7 +400,8 @@ export const worksData = [
     name: 'Florensis',
     title: 'Rethinking the entire online ecosystem',
     category: 'digital teams',
-    industry: 'recruitment'
+    industry: 'recruitment',
+    alt: 'man on his back with a backpack in front of a white board'
   },
   {
     id: 8,
@@ -403,7 +409,8 @@ export const worksData = [
     name: 'Be Lighting',
     title: 'Delivering clarity on a global scale',
     category: 'advertising',
-    industry: 'health'
+    industry: 'health',
+    alt: 'a lamppost in front of several buildings'
   },
   {
     id: 9,
@@ -411,7 +418,8 @@ export const worksData = [
     name: 'Tui',
     title: 'Swipe to find your next holiday destination',
     category: 'digital marketing',
-    industry: 'education'
+    industry: 'education',
+    alt: 'drawing of a man with cap on a blue background'
   },
   {
     id: 10,
@@ -437,7 +445,8 @@ export const worksData = [
     name: 'Chocomel',
     title: 'A compaign for the limited edition letter packs',
     category: 'commerce',
-    industry: 'health'
+    industry: 'health',
+    alt: 'five packs of chocomel with a heart stamped on each'
   },
   {
     id: 13,
@@ -445,7 +454,8 @@ export const worksData = [
     name: 'JBL',
     title: 'Live like a champion with Jerome Booteng',
     category: 'marketing',
-    industry: 'media'
+    industry: 'media',
+    alt: 'a man wearing headphones and looking thoughtful'
   },
   {
     id: 14,
@@ -453,7 +463,8 @@ export const worksData = [
     name: 'Zalando',
     title: 'Innovative SEO and content strategy for Zalando',
     category: 'commerce',
-    industry: 'recruitment'
+    industry: 'recruitment',
+    alt: 'man writing on a white board with another man beside'
   },
   {
     id: 15,
@@ -461,7 +472,8 @@ export const worksData = [
     name: 'Koninklijke Bibliotheek',
     title: 'The search for the most influential book ever',
     category: 'advertising',
-    industry: 'utilities'
+    industry: 'utilities',
+    alt: 'several books stacked on an orange background'
   },
   {
     id: 16,
@@ -469,7 +481,8 @@ export const worksData = [
     name: 'Liberty Gobal',
     title: 'Delivering complex commerce solutions',
     category: 'design',
-    industry: 'non-profit'
+    industry: 'non-profit',
+    alt: 'data center used to house computer systems and associated components'
   },
   {
     id: 17,
@@ -477,6 +490,7 @@ export const worksData = [
     name: 'Arla',
     title: 'Swipe to find your next holiday destination',
     category: 'digital teams',
-    industry: 'recruitment'
+    industry: 'recruitment',
+    alt: 'six packs of Arla yogurt of various shapes with fruits around'
   }
 ]

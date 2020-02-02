@@ -15,7 +15,7 @@
 .filters__label-works,
 .filters__label-industries {
   font-family: 'Teko-Light', sans-serif;
-  color: var(--light-font-color);
+  color: var(--gray-font-color);
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
   line-height: 1.4rem;

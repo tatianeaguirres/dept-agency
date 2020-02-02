@@ -22,9 +22,9 @@ const CardImage = ({ props, highlight }) => {
 
   return (
     <div className={highlightClassName}>
-      <img className='cards__card-image' src={props.image} alt={props.title} />
+      <img className='cards__card-image' src={props.image} alt={props.alt} />
       <p className='cards__card-name'>{props.name}</p>
-      <h3 className='cards__card-title'>{props.title}</h3>
+      <h2 className='cards__card-title'>{props.title}</h2>
       <button
         className='cards_button'
         aria-label='Open the view of this case'
