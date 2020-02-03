@@ -3,22 +3,10 @@ import './footer.css'
 import arrowUp from '../../assets/images/long-arrow-alt-up-solid.svg'
 
 const Footer = ({ footerData }) => {
-  let isSmoothScrollSupported =
-    'scrollBehavior' in document.documentElement.style
-  let scrollToTopOptions = {
-    behavior: 'smooth',
-    left: 0,
-    top: 0
-  }
-
-  const scrollToTop = (isSmoothScrollSupported, scrollToTopOptions) => {
-    if (isSmoothScrollSupported) {
-      window.scroll(scrollToTopOptions)
-    } else {
-      window.scroll(scrollToTopOptions.left, scrollToTopOptions.top)
-      document.body.scrollTop = 0
-      document.documentElement.scrollTop = 0
-    }
+  const scrollToTop = () => {
+    window.scroll(0, 0)
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
   }
 
   return (
@@ -62,9 +50,7 @@ const Footer = ({ footerData }) => {
           className='footer__top-button'
           tabIndex={0}
           aria-label='Scroll to top of page'
-          onClick={() =>
-            scrollToTop(isSmoothScrollSupported, scrollToTopOptions)
-          }
+          onClick={() => scrollToTop()}
         >
           <img src={arrowUp} alt='arrow up icon' />
           TOP
